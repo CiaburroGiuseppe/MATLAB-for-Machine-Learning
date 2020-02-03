@@ -12,11 +12,11 @@ ConfMat = confusionmat(species,PredictedValue)
 min(meas(:,3:4))
 max(meas(:,3:4))
 [x,y] = meshgrid(1:.1:6.9,0.1:.1:2.5);
-PredictedGrid = predict(NaiveModelPetal, [x y]);
-gscatter(x,y,PredictedGrid,'grb','sod')
+PredictedGrid = predict(NaiveModelPetal,[x(:),y(:)]);
+gscatter(x(:),y(:),PredictedGrid,'grb','sod')
 xlabel('Petal Length')
 ylabel('Petal Width')
-title('{\bf Classification by Naïve Bayes Method}')
+title('{\bf Classification by NaÃ¯ve Bayes Method}')
 
 
 
